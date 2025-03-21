@@ -11,7 +11,7 @@ class Product(models.Model):
     description=models.TextField()
     image=models.ImageField(upload_to='media/')
     priority=models.IntegerField(default=0)
-    delete_status=models.IntegerField(default=LIVE)
+    delete_status=models.IntegerField(choices=DELETE_CHOICES)
     created_at=models.DateTimeField(auto_now_add=True) #for the recording of date and time when the data is updated and created
     updated_at=models.DateTimeField(auto_now=True)
 
