@@ -1,5 +1,5 @@
-
 {% extends 'blank_layout.html' %}
+
 {% block banner %}
 {% include 'account_banner.html' %}
 
@@ -27,7 +27,16 @@
 
         }
     </script>
+{% if register %}
 
+  <script>
+      register()
+  </script>
+{% else %}
+<script>
+    login()
+</script>
+{% endif %}
 {% endblock %}
 
 {% endblock content %}
