@@ -55,5 +55,6 @@ def show_account(request):
             return redirect('home')
         else:
             messages.error(request,'invalid user credentials')
+        return render(request,'account.html',{'user':user})
 
-    return render (request,'account.html',context)
+    return render (request,'account.html',context,)

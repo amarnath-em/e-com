@@ -21,7 +21,7 @@ def list_products(request):
     if request.GET:
         page=request.GET.get('page',1)
     product_list=Product.objects.order_by('priority')
-    product_paginator=Paginator(product_list,2)
+    product_paginator=Paginator(product_list,4)
     product_list=product_paginator.get_page(page)
     context={'products':product_list}
 
